@@ -17,14 +17,19 @@
  * under the License.
  */
 
+
+function updateDisplay(){
+$("#myText").text(get);
+}
 var key = "pen";
 var value = "blue";
 
-window.localStorage.setItem(pen, blue);
+window.localStorage.setItem(key, value);
 
-//var get = window.localStorage.getItem(key);
+var get = window.localStorage.getItem(key);
 
 window.alert(key);
+
 
 var app = {
     // Application Constructor
@@ -38,7 +43,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
-
+		updateDisplay();
     },
 
     // Update DOM on a Received Event
