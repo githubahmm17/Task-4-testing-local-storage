@@ -16,6 +16,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+var key = "pen", "bag", "phone";
+var value = "blue", "black", "black";
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -28,6 +32,14 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+
+        window.localStorage.setItem(pen, blue);
+        window.localStorage.setItem(bag, black);
+        window.localStorage.setItem(phone, black);
+
+        var get = window.localStorage.getItem(key);
+
+        window.alert(key);
     },
 
     // Update DOM on a Received Event
@@ -41,19 +53,6 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
-
 };
-
-var key = "pen", "bag", "phone";
-var value = "blue", "black", "black";
-
-window.localStorage.setItem(pen, blue);
-window.localStorage.setItem(bag, black);
-window.localStorage.setItem(phone, black);
-
-var get = window.localStorage.getItem(key);
-
-window.alert(key);
-
 
 app.initialize();
