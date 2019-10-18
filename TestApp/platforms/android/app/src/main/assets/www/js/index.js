@@ -17,8 +17,14 @@
  * under the License.
  */
 
-var key = "pen", "bag", "phone";
-var value = "blue", "black", "black";
+var key = "pen";
+var value = "blue";
+
+window.localStorage.setItem(pen, blue);
+
+//var get = window.localStorage.getItem(key);
+
+window.alert(key);
 
 var app = {
     // Application Constructor
@@ -33,13 +39,6 @@ var app = {
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
 
-        window.localStorage.setItem(pen, blue);
-        window.localStorage.setItem(bag, black);
-        window.localStorage.setItem(phone, black);
-
-        var get = window.localStorage.getItem(key);
-
-        window.alert(key);
     },
 
     // Update DOM on a Received Event
